@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: c:/Users/luias/Downloads/devops/ellis
+      dockerfile: Dockerfile
+    container_name: api
+    restart: unless-stopped
+    ports:
+      # Mapeia a porta 8000 do contêiner para a porta 8000 da sua máquina
+      - "8000:8000"
+    volumes:
+      - c:/Users/luias/Downloads/devops/ellis:/app
